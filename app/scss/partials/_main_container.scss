@@ -1,0 +1,23 @@
+.main_container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transform: translate( 0px, 0px );
+    -moz-transform: translate( 0px, 0px );
+    -ms-transform: translate( 0px, 0px );
+    -o-transform: translate( 0px, 0px );
+    transform: translate( 0px, 0px );
+    -webkit-transition: ease 0.30s;
+    -moz-transition: ease 0.30s;
+    -ms-transition: ease 0.30s;
+    -o-transition: ease 0.30s;
+    transition: ease 0.30s;
+    &.show-nav{
+        -webkit-transform: translate(260px, 0px);
+        -moz-transform: translate(260px, 0px);
+        -ms-transform: translate(260px, 0px);
+        -o-transform: translate(260px, 0px);
+        transform: translate(260px, 0px);
+    }
+
+}

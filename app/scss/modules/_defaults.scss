@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+html {
+  font-size: 62.5%;
+  /*background: radial-gradient(ellipse at center, $base 0, $darken 20%, $back 40%);*/
+    background: -moz-radial-gradient(50% 50%, circle cover, #1E3262 57%, #132E54 100%);/* FF3.6+ */
+    background: -webkit-radial-gradient(50% 50%, circle cover, #1E3262 57%, #132E54 100%);/* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(50% 50%, circle cover, #1E3262 57%, #132E54 100%);/* Opera 11.10+ */
+    background: -ms-radial-gradient(50% 50%, circle cover, #1E3262 57%, #132E54 100%);/* IE10+ */
+    background: radial-gradient(50% 50%, circle cover, #1E3262 57%, #132E54 100%);/* W3C */
+}
+body {
+  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
+  color: #444;
+  transition: all .4s .3s ease-in;
+    color: #575859;
+}
+body,html{
+	min-height: 100%;
+	/*overflow: hidden;*/
+}

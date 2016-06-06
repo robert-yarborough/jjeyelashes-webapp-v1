@@ -1,0 +1,27 @@
+// yarboroughGrid variables
+$grid-columns: 12;
+$grid-max-width: 100%;
+
+
+// breakpoints
+// mobile
+$breakpoint-small: "only screen and (max-width: 480px)";
+// tablet
+$breakpoint-medium: "";
+// desktop
+$breakpoint-large: "";
+
+
+
+
+// color variables
+$color: #1e3262;
+$light: lighten($color,15%);
+$lighter: lighten($color,30%);
+$darker: darken($color,30%);
+
+$base : #F7F6F0;
+$darken : darken($color, 8%);
+$back: darken($color, 20%);
+
+

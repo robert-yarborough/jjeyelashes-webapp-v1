@@ -1,0 +1,110 @@
+/*
+/* Typography
+====================================================================== */
+
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1.2;
+}
+
+hr {
+    clear: both;
+    margin: 11px 0 24px;
+    border : 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(20, 42, 78, 0.80), rgba(0, 0, 0, 0));
+}
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong,
+b {
+    font-weight: bold;
+    line-height: inherit;
+}
+
+small {
+    font-size: 60%;
+    line-height: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ol,
+ul.square,
+ul.circle,
+ul.disc {
+    margin-left: 17px;
+}
+
+ul.square {
+    list-style: square;
+}
+
+ul.circle {
+    list-style: circle;
+}
+
+ul.disc {
+    list-style: disc;
+}
+
+ul li {
+    padding-left: 4px;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin: 3px 0 3px 17px;
+}
+
+@font-face {
+  font-family: 'Font-Name';
+  src: url('../fonts/font-name.eot');
+  src: url('../fonts/font-name.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/font-name.woff') format('woff'),
+       url('../fonts/font-name.ttf') format('truetype'),
+       url('../fonts/font-name.svg#font-name') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
