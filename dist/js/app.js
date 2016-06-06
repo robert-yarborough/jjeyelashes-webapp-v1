@@ -7,13 +7,12 @@
  * Copyright 2016. MIT licensed.
  */
 // Declare app level module which depends on views, and components
-angular.module('myApp', [
+var myApp = angular.module('myApp', [
   'ngRoute',
   'ui.bootstrap'
-])
+]);
 // configure our routes
-    .config( ['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
-        'use strict';
+myApp.config( ['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider){
     $locationProvider.hashPrefix('!');
     $routeProvider
 
@@ -23,17 +22,17 @@ angular.module('myApp', [
             controller  : 'mainController'
         })
 
-        // route for the about page
+        // route for the services page
         .when('/services', {
             templateUrl : 'views/services.html',
             controller  : 'servicesController'
         })
 
-        // route for the contact page
+        // route for the products page
         .when('/products', {
             templateUrl : 'views/products.html',
             controller  : 'productsController'
-        });
+        }).otherwise({redirectTo: '/'});
 }]);
 
 // create the controller and inject Angular's $scope

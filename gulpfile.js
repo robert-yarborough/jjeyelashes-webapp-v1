@@ -65,7 +65,7 @@ gulp.task('browser-sync',function(){
     'use strict';
     browserSync.init(null, {
        server: {
-           baseDir: 'dist'
+           baseDir: 'app'
        }
     });
 });
