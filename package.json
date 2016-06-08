@@ -21,12 +21,12 @@
     "karma-firefox-launcher": "^0.1.7",
     "karma-jasmine": "^0.3.8",
     "karma-junit-reporter": "^0.4.1",
+    "normalize.css": "^4.1.1",
     "protractor": "^3.2.2",
     "shelljs": "^0.6.0",
     "uglify": "^0.1.5",
     "webdriver-manager": "^10.0.2"
   },
-
   "h5bp-configs": {
     "directories": {
       "archive": "archive",
