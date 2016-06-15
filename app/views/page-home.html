@@ -28,13 +28,13 @@
      </div>-->
     <!--product arrow hero -->
 </section>
-<nav class="navbar navbar-default submenu">
+<nav id="submenu" class="navbar navbar-default submenu">
     <div class="container">
         <ul class="row">
-            <li class="col-lg-3"><a class="center-block" href="#">one</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#">two</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#">three</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#">four</a></li>
+            <li class="col-lg-3"><a class="center-block" href="#services">Services</a></li>
+            <li class="col-lg-3"><a class="center-block" href="#products">Products</a></li>
+            <li class="col-lg-3"><a class="center-block" href="#locations">Locations</a></li>
+            <li class="col-lg-3"><a class="center-block" href="#bookings">Bookings</a></li>
         </ul>
     </div>
 </nav><!--end submenu-->
@@ -71,11 +71,11 @@
             </div>
         </div>
 </section>
-<section class="page-header text-center header-one">
-    <h1>Example page header <small>Subtext for header</small></h1>
+<section class="page-header text-center header-one page-header-center ng-controller="mainController" >
+    <h1 du-parallax y="background">All Products <small>Subtext for header</small></h1>
 </section>
-<section class="container" ng-controller="mainController">
-    <div class="row" du-parallax y="background">
+<section class="container">
+    <div class="row">
         <div class="thumbnails col-lg-3">
             <div class="thumbnail">
                 <img src="https://placehold.it/310x150" alt="...">
@@ -241,3 +241,8 @@
     </div>
     <hr class="featurette-divider">
 </section>
+<footer>
+    <div ng-controller="mainController">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
+    </div>
+</footer>

@@ -11,6 +11,18 @@
 
 .page h1    { font-size:60px; }
 .page a     { margin-top:50px; }
+.page-header {
+    margin: 44px 0 0 !important;
+    border: none !important;
+}
+a{
+    color: #b3b3b3 !important;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: #cd1a57 !important;
+}
 
 /* PAGES (specific colors for each page)
 ============================================================================= */
@@ -165,7 +177,7 @@ div.product-display{
 }
 
 .thumbnails {
-    padding: 0px;
+    /*padding: 0px;*/
 }
 
 .thumbnail {
@@ -200,4 +212,37 @@ div.product-display{
 
 .testimonials{
     margin-top: 120px;
+}
+
+.page-header-center {
+    position: relative;
+    top: 50px;
+}
+
+.angular-google-map-container {
+    height: 400px;
+}
+
+.pager li > a {
+    color: #cd1a57 !important;
+    border: 1px solid #cd1a57 !important;
+}
+
+.pager li > a:hover {
+    color: #ffffff !important;
+    background-color: #cd1a57 !important;
+}
+
+.pager li > a:focus {
+    color: #ffffff !important;
+    background-color: #cd1a57 !important;
+}
+
+/* sub-nav menu scroll classes */
+
+#submenu.navbar-fixed-top {
+    top: -100px;
+}
+#submenu.navbar-show-down {
+    top: 0;
 }
