@@ -7,69 +7,84 @@
   <meta charset="utf-8">
     <base href="/">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>JJ Eyelashes | web application</title>
   <meta name="description" content="prototype">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/readable/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css">
+
+    <!-- load css scripts -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/page-home.css">
+
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
+<!--<video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+    <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+    <!--<source src="http://thenewcode.com/assets/videos/polina.webm" type="video/webm">
+    <source src="http://thenewcode.com/assets/videos/polina.mp4" type="video/mp4">
+</video>
+<div id="polina">
+    <h1>Polina</h1>
+    <p>filmed by Alexander Wagner 2011
+    <p><a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">original article</a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porta dictum turpis, eu mollis justo gravida ac. Proin non eros blandit, rutrum est a, cursus quam. Nam ultricies, velit ac suscipit vehicula, turpis eros sollicitudin lacus, at convallis mauris magna non justo. Etiam et suscipit elit. Morbi eu ornare nulla, sit amet ornare est. Sed vehicula ipsum a mattis dapibus. Etiam volutpat vel enim at auctor.</p>
+    <p>Aenean pharetra convallis pellentesque. Vestibulum et metus lectus. Nunc consectetur, ipsum in viverra eleifend, erat erat ultricies felis, at ultricies mi massa eu ligula. Suspendisse in justo dapibus metus sollicitudin ultrices id sed nisl.</p>
+    <button>Pause</button>
+</div>-->
+
+
+
+<!--global header-->
 <header>
     <nav class="navbar navbar-default navbar-fixed-top mainmenu">
         <div class="container">
             <ul class="pager col-lg-4">
-                <li><a href="#services"><i class="fa fa-shield"></i>Search</a></li>
+                <li class="pull-left">
+                    <form>
+                        <input type="search" ng-model="asyncSelected" placeholder="Search" class="form-control">
+                    </form>
+                </li>
             </ul>
             <div class="navbar-header col-lg-4">
-                <a class="navbar-brand text-center" href="#home"><svg src="images/logo-inverse.svg" class="img-responsive logo" alt="brand"></svg></a>
+                <a class="navbar-brand text-center" href="#home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
             </div>
 
             <ul class="pager col-lg-4">
-                <li class=""><a href="#products"><i class="fa fa-comment"></i>Cart</a></li>
+                <li class="pull-right"><a href="#products"><i class="fa fa-shopping-cart"></i>Cart</a></li>
             </ul>
         </div>
     </nav><!--end mainmenu-->
-</header>
-
-<div id="main">
+</header><!--end global header-->
+<!--main content-->
+<section id="main">
     <div ng-view></div><!--end view -->
-   <!-- <nav class="navbar navbar-default submenu">
-        <div class="container">
-            <ul class="row">
-                <li class="col-lg-3"><a class="center-block" href="#">one</a></li>
-                <li class="col-lg-3"><a class="center-block" href="#">two</a></li>
-                <li class="col-lg-3"><a class="center-block" href="#">three</a></li>
-                <li class="col-lg-3"><a class="center-block" href="#">four</a></li>
-            </ul>
-        </div>
-    </nav><!--end submenu-->
-</div>
+</section><!--end main content-->
 
-
-  <div>Angular seed app: v<span app-version></span></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
 
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="bower_components/angular-animate/angular-animate.js"></script>
-  <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-  <script src="bower_components/angular-material/angular-material.min.js"></script>
-  <script src="//oblador.github.io/angular-scroll/0.6.2/angular-scroll.min.js"></script>
-  <script src="//oblador.github.io/angular-parallax/angular-parallax.min.js"></script>
-  <script src="//rawgit.com/angular-ui/angular-google-maps/2.1.5/dist/angular-google-maps.min.js"></script>
-  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-  <script src="app.js"></script>
+<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="bower_components/angular-material/angular-material.min.js"></script>
+<script src="//oblador.github.io/angular-scroll/0.6.2/angular-scroll.min.js"></script>
+<script src="//oblador.github.io/angular-parallax/angular-parallax.min.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/angular-simple-logger/dist/angular-simple-logger.js"></script>
+<script src="bower_components/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+<script src="app.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
 </body>
 </html>

@@ -1,6 +1,149 @@
-<div class="jumbotron text-center">
-    <h1>Products Page</h1>
+<section id="page-products" ng-controller="ScrollCtrl">
+    <nav class="navbar navbar-default submenu" sticky>
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-3"><a class="center-block" href="#services">Services</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#products">Products</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#locations">Locations</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#bookings">Bookings</a></li>
+            </ul>
+        </div>
+    </nav><!--end submenu-->
+    <section id="top" ng-controller="CarouselCtrlservices">
+        <div>
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.id}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+        <!--<div class="row">
+             <div class="col-md-6">
+                 <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+                 <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox" ng-model="noWrapSlides">
+                         Disable Slide Looping
+                     </label>
+                 </div>
+             </div>
+             <div class="col-md-6">
+                 Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+                 <br />Enter a negative number or 0 to stop the interval.
+             </div>
+         </div>-->
+        <!--product arrow hero -->
+    </section>
+    <!-- start the featurettes -->
+    <section class="container">
+        <section class="row featurette">
+            <div class="col-lg-7">
+                <h2 class="featurette-heading">First Heading</h2>
+                <p class="lead">Content</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row featurette">
+            <div class="col-lg-7">
+                <h2 class="featurette-heading">First Heading</h2>
+                <p class="lead">Content</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row featurette">
+            <div class="col-lg-7">
+                <h2 class="featurette-heading">First Heading</h2>
+                <p class="lead">Content</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row featurette">
+            <div class="col-lg-7">
+                <h2 class="featurette-heading">First Heading</h2>
+                <p class="lead">Content</p>
+            </div>
+            <div class="col-lg-5">
+                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
+            </div>
+        </section>
+        <hr class="featurette-divider">
+        <section class="row">
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+            <div class="col-lg-4">
+                <h2>Heading</h2>
+                <p>content copy...</p>
+            </div>
+        </section>
+        <footer>
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p>© 2015 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        </footer>
 
-    <p>{{ message }}</p>
-</div>
-
+    </section>
+</section>

@@ -1,0 +1,45 @@
+<section id="page-locations" ng-controller="ScrollCtrl">
+    <nav class="navbar navbar-default submenu" sticky>
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-3"><a class="center-block" href="#services">Services</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#products">Products</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#locations">Locations</a></li>
+                <li class="col-lg-3"><a class="center-block" href="#bookings">Bookings</a></li>
+            </ul>
+        </div>
+    </nav><!--end submenu-->
+    <!-- start the featurettes -->
+    <section class="">
+        <div class="jumbotron hero-header">
+            <h1>Locations</h1>
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+
+        </div>
+
+    </section>
+    <section class="container well" ng-controller="locationsController">
+        <!--<div class="tab_system">
+            <ul class="categories">
+                <li class="selected">first</li>
+                <li>second</li>
+                <li>third</li>
+                <li>fourth</li>
+            </ul>
+            <div class="tab_content">
+
+            </div>
+        </div>-->
+        <uib-tabset active="active">
+            <uib-tab index="$index + 1" ng-repeat="tab in tabs" heading="{{tab.title}}">
+                {{tab.content}}
+                <div ng-include="tab.content"></div>
+            </uib-tab>
+        </uib-tabset>
+    </section>
+    <footer class="container">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>© 2016 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+</section>

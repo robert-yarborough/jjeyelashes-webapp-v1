@@ -1,180 +1,219 @@
-<section ng-controller="CarouselCtrl">
-    <div>
-        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
-                <div class="carousel-caption">
-                    <h4>Slide {{slide.id}}</h4>
-                    <p>{{slide.text}}</p>
-                </div>
-            </uib-slide>
-        </uib-carousel>
-    </div>
-    <!--<div class="row">
-         <div class="col-md-6">
-             <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-             <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox" ng-model="noWrapSlides">
-                     Disable Slide Looping
-                 </label>
+<section id="page-home" ng-controller="ScrollCtrl" >
+    <div  id="top" class="main-carousel" ng-controller="CarouselCtrl">
+        <div>
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.id}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+        </div>
+        <!--<div class="row">
+             <div class="col-md-6">
+                 <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+                 <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox" ng-model="noWrapSlides">
+                         Disable Slide Looping
+                     </label>
+                 </div>
              </div>
-         </div>
-         <div class="col-md-6">
-             Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-             <br />Enter a negative number or 0 to stop the interval.
-         </div>
-     </div>-->
-    <!--product arrow hero -->
-</section>
-<nav id="submenu" class="navbar navbar-default submenu">
-    <div class="container">
-        <ul class="row">
-            <li class="col-lg-3"><a class="center-block" href="#services">Services</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#products">Products</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#locations">Locations</a></li>
-            <li class="col-lg-3"><a class="center-block" href="#bookings">Bookings</a></li>
-        </ul>
+             <div class="col-md-6">
+                 Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+                 <br />Enter a negative number or 0 to stop the interval.
+             </div>
+         </div>-->
+        <!--product arrow hero -->
     </div>
-</nav><!--end submenu-->
-<section class="col-lg-12 row product-display">
+    <nav id="submenu" class="navbar navbar-default submenu" sticky>
+        <div class="container">
+            <ul class="row">
+                <li class="col-lg-3"><a class="center-block" ng-click="gotoTop()" href="#services">Services</a></li>
+                <li class="col-lg-3"><a class="center-block" ng-click="gotoTop()" href="#products">Products</a></li>
+                <li class="col-lg-3"><a class="center-block" ng-click="gotoTop()" href="#locations">Locations</a></li>
+                <li class="col-lg-3"><a class="center-block" ng-click="gotoTop()" href="#bookings">Bookings</a></li>
+            </ul>
+        </div>
+    </nav><!--end submenu-->
+    <div class="col-lg-12 row product-display">
         <div class="cssarrow col-lg-3"></div>
         <div class="thumbnails col-lg-3">
             <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
+                <img src="http://gdurl.com/nEtV" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h3>Make-Up</h3>
                     <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p><a href="#" class="btn btn-default" role="button">Book</a></p>
                 </div>
             </div>
         </div>
         <div class="thumbnails col-lg-3">
             <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
+                <img src="http://gdurl.com/MGCG" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h3>Skin Care</h3>
                     <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p><a href="#" class="btn btn-default" role="button">Book</a></p>
                 </div>
             </div>
         </div>
         <div class="thumbnails col-lg-3">
             <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
+                <img src="http://gdurl.com/65Qf" alt="...">
                 <div class="caption">
-                    <h3>Thumbnail label</h3>
+                    <h3>Eyelashes</h3>
                     <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-</section>
-<section class="page-header text-center header-one page-header-center ng-controller="mainController" >
-    <h1 du-parallax y="background">All Products <small>Subtext for header</small></h1>
-</section>
-<section class="container">
-    <div class="row">
-        <div class="thumbnails col-lg-3">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnails col-lg-3">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnails col-lg-3">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnails col-lg-3">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnails col-lg-6">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="thumbnails col-lg-6">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p><a href="#" class="btn btn-default" role="button">Book</a></p>
                 </div>
             </div>
         </div>
     </div>
-    <hr class="featurette-divider">
+    <div class="page-header text-center header-one page-header-center" ng-controller="mainController" >
+      <h1 du-parallax y="background">All Products</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+        <fmp-card id="card-1" class="thumbnails col-lg-3 my-card" image="http://gdurl.com/H2eE" front-caption="" small-card-width="200px" small-card-height="300px">
+            <div id="product-card" class="" product-card>
+                <div class="back-text">{{leftBackText}}</div>
+                <div id="product-front">
+                    <img src="https://placehold.it/310x150" alt="...">
+                    <div class="image_overlay"></div>
+                    <div id="view_details" class="caption thumbnail">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                    <div class="stats">
+                        <div class="stats-container">
+                            <span class="product_price">$39</span>
+                            <span class="product_name">Adidas Originals</span>
+                            <p>Men's running shirt</p>
 
-</section>
-<section class="page-header text-center header-two">
-    <h1>Example page header <small>Subtext for header</small></h1>
-</section>
-<section class="container-fluid" ng-controller="mainController">
-    <div class="row special-offer" du-parallax y="background">
-        <div class="thumbnails col-lg-4">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                            <div class="product-options">
+                                <strong>SIZES</strong>
+                                <span>XS, S, M, L, XL, XXL</span>
+                                <strong>COLORS</strong>
+                                <div class="colors">
+                                    <div class="c-blue"><span></span></div>
+                                    <div class="c-red"><span></span></div>
+                                    <div class="c-white"><span></span></div>
+                                    <div class="c-green"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id="product-back"></div>
             </div>
-        </div>
-        <div class="thumbnails col-lg-4">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </fmp-card>
+        <fmp-card id="card-2" class="thumbnails col-lg-3 my-card" image="http://gdurl.com/AqVK" image="http://www.fitnessmealplanner.com/images/Icon.png" front-caption="" small-card-width="200px" small-card-height="300px">
+            <div id="product-card" class="" product-card>
+                <div class="back-text">{{leftBackText}}</div>
+                <div id="product-front">
+                    <img src="https://placehold.it/310x150" alt="...">
+                    <div class="image_overlay"></div>
+                    <div id="view_details" class="caption thumbnail">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                    <div class="stats">
+                        <div class="stats-container">
+                            <span class="product_price">$39</span>
+                            <span class="product_name">Adidas Originals</span>
+                            <p>Men's running shirt</p>
+
+                            <div class="product-options">
+                                <strong>SIZES</strong>
+                                <span>XS, S, M, L, XL, XXL</span>
+                                <strong>COLORS</strong>
+                                <div class="colors">
+                                    <div class="c-blue"><span></span></div>
+                                    <div class="c-red"><span></span></div>
+                                    <div class="c-white"><span></span></div>
+                                    <div class="c-green"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id="product-back"></div>
             </div>
-        </div>
-        <div class="thumbnails col-lg-4">
-            <div class="thumbnail">
-                <img src="https://placehold.it/310x150" alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+        </fmp-card>
+        <fmp-card id="card-3" class="thumbnails col-lg-3 my-card" image="http://gdurl.com/TDxV" image="http://www.fitnessmealplanner.com/images/Icon.png" front-caption="" small-card-width="200px" small-card-height="300px">
+            <div id="product-card" class="" product-card>
+                <div class="back-text">{{leftBackText}}</div>
+                <div id="product-front">
+                    <img src="https://placehold.it/310x150" alt="...">
+                    <div class="image_overlay"></div>
+                    <div id="view_details" class="caption thumbnail">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                    <div class="stats">
+                        <div class="stats-container">
+                            <span class="product_price">$39</span>
+                            <span class="product_name">Adidas Originals</span>
+                            <p>Men's running shirt</p>
+
+                            <div class="product-options">
+                                <strong>SIZES</strong>
+                                <span>XS, S, M, L, XL, XXL</span>
+                                <strong>COLORS</strong>
+                                <div class="colors">
+                                    <div class="c-blue"><span></span></div>
+                                    <div class="c-red"><span></span></div>
+                                    <div class="c-white"><span></span></div>
+                                    <div class="c-green"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div id="product-back"></div>
             </div>
-        </div>
+        </fmp-card>
+        <fmp-card id="card-4" class="thumbnails col-lg-3 my-card" image="http://gdurl.com/OTfM" image="http://www.fitnessmealplanner.com/images/Icon.png" front-caption="" small-card-width="200px" small-card-height="300px">
+            <div id="product-card" class="" product-card>
+                <div class="back-text">{{leftBackText}}</div>
+                <div id="product-front">
+                    <img src="https://placehold.it/310x150" alt="...">
+                    <div class="image_overlay"></div>
+                    <div id="view_details" class="caption thumbnail">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                    <div class="stats">
+                        <div class="stats-container">
+                            <span class="product_price">$39</span>
+                            <span class="product_name">Adidas Originals</span>
+                            <p>Men's running shirt</p>
+
+                            <div class="product-options">
+                                <strong>SIZES</strong>
+                                <span>XS, S, M, L, XL, XXL</span>
+                                <strong>COLORS</strong>
+                                <div class="colors">
+                                    <div class="c-blue"><span></span></div>
+                                    <div class="c-red"><span></span></div>
+                                    <div class="c-white"><span></span></div>
+                                    <div class="c-green"><span></span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="product-back"></div>
+            </div>
+        </fmp-card>
+
         <div class="thumbnails col-lg-6">
             <div class="thumbnail">
                 <img src="https://placehold.it/310x150" alt="...">
@@ -196,53 +235,234 @@
             </div>
         </div>
     </div>
-    <hr class="featurette-divider">
-</section>
-<section class="container testimonials">
-    <hr class="featurette-divider">
+    </div>
+    <div class="special-offers">
+        <div class="page-header text-center header-two">
+            <h1 du-parallax y="background">Special Offers</h1>
+        </div>
+        <div class="container" ng-controller="mainController">
+            <div class="row special-offer" du-parallax y="background">
+                <div class="thumbnails col-lg-4">
+                    <div class="thumbnail">
+                        <img src="https://placehold.it/300x288" alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails col-lg-4">
+                    <div class="thumbnail">
+                        <img src="https://placehold.it/300x288" alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="thumbnails col-lg-4">
+                    <div class="thumbnail">
+                            <img src="https://placehold.it/300x288" alt="...">
+                        <div class="caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" du-parallax y="background">
+                <div class="thumbnails col-lg-12">
+                    <div class="thumbnail col-lg-12">
+                        <div class="left-caption col-lg-8">
+                            <img src="https://placehold.it/310x150" alt="...">
+                        </div>
+                        <div class="right-caption caption">
+                            <h3>Thumbnail label</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Testimonials div -->
+    <div class="testimonials">
     <div ng-controller="CarouselCtrltestimony">
-    <div>
-        <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-            <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
-                <div class="carousel-caption">
-                    <h4>Slide {{slide.id}}</h4>
-                    <p>{{slide.text}}</p>
-                </div>
-            </uib-slide>
-        </uib-carousel>
-    </div>
-    <!--<div class="row">
-         <div class="col-md-6">
-             <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-             <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
-             <div class="checkbox">
-                 <label>
-                     <input type="checkbox" ng-model="noWrapSlides">
-                     Disable Slide Looping
-                 </label>
-             </div>
-         </div>
-         <div class="col-md-6">
-             Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-             <br />Enter a negative number or 0 to stop the interval.
-         </div>
-     </div>-->
-    <!--product arrow hero -->
-    </div>
-    <div class="row featurette">
-        <div class="col-lg-12">
-            <p class="lead">"At vero eos et accusamus et iusto odio dignissimos ducimus
-                qui blanditiis praesentium voluptatum deleniti atque corrupti quos .
-                Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias
-                consequatur aut perferendis doloribus asperiores repellat."</p>
-            <h2 class="featurette-heading">Important Client/Customer</h2>
+        <div>
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>{{slide.header}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
         </div>
+        <!--<div class="row">
+             <div class="col-md-6">
+                 <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
+                 <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
+                 <div class="checkbox">
+                     <label>
+                         <input type="checkbox" ng-model="noWrapSlides">
+                         Disable Slide Looping
+                     </label>
+                 </div>
+             </div>
+             <div class="col-md-6">
+                 Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
+                 <br />Enter a negative number or 0 to stop the interval.
+             </div>
+         </div>-->
+        <!--product arrow hero -->
     </div>
-    <hr class="featurette-divider">
-</section>
-<footer>
-    <div ng-controller="mainController">
-        <ui-gmap-google-map center='map.center' zoom='map.zoom'></ui-gmap-google-map>
-    </div>
-</footer>
+    </div><!--end Testimonials div -->
+<!-- Footer Section -->
+    <footer class="angular-google-map-container">
+        <section id="contact" class="background2 section-padding">
+            <div class="container">
+                <div class="row mb30">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+                        <h2>Contact</h2>
+                        <span class="section-divider mb15"></span>
+                        <p class="no-margin scaleReveal" data-sr-id="53" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">Beautiful All Day. Beautiful All Night.</p>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col-sm-5 col-lg-4">
+                        <h5 class="heading-1 mb20">Visit Us</h5>
+                        <h4 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420<br>New York City, New York 99912</h4>
+                        <p class="no-margin text-xs-small">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates. Temporibus autem quibusdam et aut.</p>
+                        <hr class="mini-hr">
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                    <div class="col-sm-6 col-lg-7 mt30-xs">
+                        <form data-toggle="validator" id="contactForm" name="contactForm" novalidate="true">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="msg_subject" placeholder="Subject *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <input class="form-control" id="phone" placeholder="Phone" type="text">
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row mb10">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="name" placeholder="Your Name *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="email form-control" data-error="This section is required." id="email" placeholder="Email *" required="" type="email">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <textarea class="form-control" data-error="This section is required." id="message" placeholder="Message *" required="" rows="5"></textarea>
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt15">
+                                <div class="col-sm-6">
+                                    <div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6 text-right">
+                                    <button type="submit" id="submit" class="btn btn-default btn-lg disabled" style="pointer-events: all; cursor: pointer;">Send</button>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                        </form><!-- /.form -->
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+        <section id="map" style="transform: translateZ(0px); background-color: rgb(229, 227, 223);" ng-controller="mainController">
+           <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+            <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+            </ui-gmap-marker>
+        </ui-gmap-google-map>
+        </section>
+        <section id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="col-sm-3">
+                        <span class="icon-handle-streamline-vector logo"></span>
+                        <a class="navbar-brand text-center" href="#home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
+                        <p class="text-switch no-margin">© 2016 All Rights Reserved</p>
+                    </div><!-- /.column -->
+
+                    <!-- Social -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Social</h5>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-snapchat fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- List -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Info</h5>
+                        <ul class="list-arrow list-arrow-color no-margin text-small">
+                            <li>About JJ</li>
+                            <li>Locations</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>FAQ</li>
+                            <li>Account</li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- Contact -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1 mb20">Contact Us</h5>
+                        <h5 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420 New York City, New York 99912</h5>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                </div>
+
+                <div class="row">
+                    <hr class="featurette-divider">
+                    <div class="col-sm-12 text-center">
+                        <span class="text-small">Crafted with <i class="fa fa-heart" aria-hidden="true"></i> by Robert Yarborough © 2016</span>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+    </footer><!--end Footer Section -->
+</section><!--end page-home template-->
