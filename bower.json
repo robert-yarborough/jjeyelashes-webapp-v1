@@ -24,6 +24,11 @@
     "normalize-css": "normalize.css#^4.1.1",
     "ng-parallax": "^0.1.8",
     "angular-scroll": "^1.0.0",
-    "angular-parallax": "^0.0.2"
+    "angular-parallax": "^0.0.2",
+    "angular-ui-router": "^0.3.1"
+  },
+  "resolutions": {
+    "angular": "^1.4.0",
+    "angular-ui-router": "^0.2.14"
   }
 }

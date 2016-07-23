@@ -1,6 +1,6 @@
 /**/
 #top {
-    margin-top: 100px;
+   /* margin-top: 100px;*/
 }
 
 
@@ -111,6 +111,14 @@ a:hover {
     color: #cd1a57 !important;
 }
 
+
+form i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #cd1a57;
+}
+
 input {
     outline: none;
 }
@@ -127,7 +135,7 @@ input::-webkit-search-cancel-button {
 
 
 input[type=search] {
-    background: #ffffff url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+    /*background: #ffffff url(http://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;*/
     border: solid 1px rgb(255,128,171);
     padding: 9px 10px 9px 32px;
     width: 55px;

@@ -18,6 +18,7 @@
     <!-- load css scripts -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/page-home.css">
+    <link rel="stylesheet" href="css/page-location.css">
 
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -45,23 +46,24 @@
             <ul class="pager col-lg-4">
                 <li class="pull-left">
                     <form>
+                        <i class="fa fa-search" aria-hidden="true"></i>
                         <input type="search" ng-model="asyncSelected" placeholder="Search" class="form-control">
                     </form>
                 </li>
             </ul>
             <div class="navbar-header col-lg-4">
-                <a class="navbar-brand text-center" href="#home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
+                <a class="navbar-brand text-center" ui-sref="home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
             </div>
 
             <ul class="pager col-lg-4">
-                <li class="pull-right"><a href="#products"><i class="fa fa-shopping-cart"></i>Cart</a></li>
+                <li class="pull-right"><a ui-sref="products"><i class="fa fa-shopping-cart"></i>Cart</a></li>
             </ul>
         </div>
     </nav><!--end mainmenu-->
 </header><!--end global header-->
 <!--main content-->
 <section id="main">
-    <div ng-view></div><!--end view -->
+    <div  ui-view></div><!--end view -->
 </section><!--end main content-->
 
 
@@ -71,7 +73,9 @@
 
 <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/angular-ui-router-tabs/src/ui-router-tabs.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 <script src="bower_components/angular-material/angular-material.min.js"></script>

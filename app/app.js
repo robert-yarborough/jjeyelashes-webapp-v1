@@ -1,7 +1,8 @@
 // Declare app level module which depends on views, and components
 var myApp = angular.module('myApp', [
-  'ngRoute',
+  'ui.router',
   'ui.bootstrap',
+  'ui.router.tabs',
   'ngAnimate',
   'ngMaterial',
   'duParallax',
@@ -976,8 +977,8 @@ myApp.directive("fmpCard", function($timeout, $window) {
     /* ----  Image Gallery Carousel   ---- */
 /*}]);*/
 
-// configure our routes
-myApp.config( ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider', function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
+// configure our routes using ng-router
+/*myApp.config( ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvider', function($routeProvider, $locationProvider, uiGmapGoogleMapApiProvider){
     $routeProvider
 
     // route for the home page
@@ -1020,7 +1021,57 @@ myApp.config( ['$routeProvider', '$locationProvider', 'uiGmapGoogleMapApiProvide
     });
 
 
+}]);*/
+// configure our routes using ui-router
+myApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+    'use strict';
+    $urlRouterProvider.otherwise('/home');
+    $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'views/page-home.html',
+            controller: 'mainController'
+        })
+        .state('services', {
+           url: '/services',
+           templateUrl: 'views/page-services.html',
+           controller: 'servicesController'
+        })
+        .state('products', {
+            url: '/products',
+            templateUrl: 'views/page-products.html',
+            controller: 'productsController'
+        })
+        .state('locations', {
+            url: '/locations',
+            templateUrl: 'views/page-locations.html',
+            controller: 'locationsController'
+        })
+        .state('locations.madison', {
+            url: '/madison',
+            templateUrl: 'views/page-locations-madison.html'
+        })
+        .state('locations.soho', {
+            url: '/soho',
+            templateUrl: 'views/page-locations-soho.html'
+        })
+        .state('locations.midtown', {
+            url: '/midtown',
+            templateUrl: 'views/page-locations-midtown.html'
+        })
+        .state('locations.heraldsquare', {
+            url: '/heraldSquare',
+            templateUrl: 'views/page-locations-heraldsquare.html'
+        })
+        .state('bookings', {
+            url: '/bookings',
+            templateUrl: 'views/page-bookings.html',
+            controller: 'bookingsController'
+        });
+
+
 }]);
+
 
 // create the controller and inject Angular's $scope
 myApp.controller('mainController', function($scope, $interval, uiGmapGoogleMapApi) {
@@ -1121,7 +1172,6 @@ myApp.controller('mainController', function($scope, $interval, uiGmapGoogleMapAp
     $scope.leftBackText = '';
     $scope.rightBackText = 'This is the right cards back, you can place whatever you feel like';
 });
-
 myApp.controller('servicesController', function($scope) {
     'use strict';
     $scope.pageClass = 'page-services';
@@ -1134,13 +1184,35 @@ myApp.controller('locationsController', function($scope, $window) {
     'use strict';
     //ng-animate pageClass reference
     $scope.pageClass = 'page-locations';
-    //angular-ui tabs array TODO: Create templates via ui-router states instead of ng-router hashchanges;
-    $scope.tabs = [
-        { title:'Dynamic Title 1', content:'Dynamic content 1' },
-        { title:'Dynamic Title 2', content:'Dynamic content 2'},
-        { title:'Dynamic Title 3', content:'Dynamic content 3'},
-        { title:'Dynamic Title 4', content:'Dynamic content 4'}
+    //ng-route array TODO: Create templates via ui-router states instead of ng-router hashchanges;
+    /*$scope.tabs = [
+        { title:'Madison', content: 'Madison Square', active: true },
+        { title:'Soho', content:'soho'},
+        { title:'Midtown', content:'midtown'},
+        { title:'Herald Square', content:'herald square'}
+    ];*/
+
+    //angular-ui tabs array
+    $scope.tabData   = [
+        {
+            heading: 'Madison',
+            route:   'locations.madison'
+        },
+        {
+            heading: 'Soho',
+            route:   'locations.soho'
+        },
+        {
+            heading: 'Midtown',
+            route: 'locations.midtown'
+        },
+        {
+            heading: 'Herald Square',
+            route: 'locations.heraldsquare'
+        }
     ];
+
+
 
     $scope.model = {
         name: 'Tabs'
