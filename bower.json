@@ -25,7 +25,10 @@
     "ng-parallax": "^0.1.8",
     "angular-scroll": "^1.0.0",
     "angular-parallax": "^0.0.2",
-    "angular-ui-router": "^0.3.1"
+    "angular-ui-router": "^0.3.1",
+    "angular-formly": "^8.2.1",
+    "api-check": "^7.5.5",
+    "angular-formly-templates-bootstrap": "^6.3.2"
   },
   "resolutions": {
     "angular": "^1.4.0",

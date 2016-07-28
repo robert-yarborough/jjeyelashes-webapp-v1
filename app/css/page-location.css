@@ -1,3 +1,39 @@
+/* Animations */
+
+.fade {
+    opacity: 1;
+}
+
+/*  ng-enter/ng-leave */
+.fade.ng-enter, .fade.ng-leave {
+    transition: 0.3s linear opacity;
+}
+
+/* starting animation for enter */
+.fade.ng-enter {
+    opacity: 0;
+}
+
+/* active state animation */
+.fade.ng-enter.ng-enter-active {
+    opacity: 0.1;
+}
+
+
+/* starting animations for leave */
+.fade.ng-leave {
+    opacity: 0;
+}
+/* active state animation for leave */
+.fade.ng-leave.ng-leave-active {
+    opacity: 1;
+}
+
+
+
+
+
+
 section.hero-location{
     margin-top: 50px;
 }
@@ -21,6 +57,7 @@ section.ui-tabsystem{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    margin-bottom: 100px;
 }
 
 section.ui-tabsystem .tab-content {

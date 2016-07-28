@@ -1,34 +1,4 @@
 <section id="page-bookings" ng-controller="ScrollCtrl">
-    <section id="top" ng-controller="CarouselCtrlservices">
-        <div>
-            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
-                <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                    <img ng-src="{{slide.image}}" style="margin:auto;">
-                    <div class="carousel-caption">
-                        <h4>Slide {{slide.id}}</h4>
-                        <p>{{slide.text}}</p>
-                    </div>
-                </uib-slide>
-            </uib-carousel>
-        </div>
-        <!--<div class="row">
-             <div class="col-md-6">
-                 <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-                 <button type="button" class="btn btn-info" ng-click="randomize()">Randomize slides</button>
-                 <div class="checkbox">
-                     <label>
-                         <input type="checkbox" ng-model="noWrapSlides">
-                         Disable Slide Looping
-                     </label>
-                 </div>
-             </div>
-             <div class="col-md-6">
-                 Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-                 <br />Enter a negative number or 0 to stop the interval.
-             </div>
-         </div>-->
-        <!--product arrow hero -->
-    </section>
     <nav class="navbar navbar-default submenu" sticky>
         <div class="container">
             <ul class="row">
@@ -39,111 +9,196 @@
             </ul>
         </div>
     </nav><!--end submenu-->
-    <!-- start the featurettes -->
-    <section class="container">
-        <section class="row featurette">
-            <div class="col-lg-7">
-                <h2 class="featurette-heading">First Heading</h2>
-                <p class="lead">Content</p>
+    <section class="hero-location">
+        <div class="jumbotron hero-header">
+            <div class="container">
+                <h1>Bookings</h1>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </div>
-            <div class="col-lg-5">
-                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row featurette">
-            <div class="col-lg-7">
-                <h2 class="featurette-heading">First Heading</h2>
-                <p class="lead">Content</p>
-            </div>
-            <div class="col-lg-5">
-                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row featurette">
-            <div class="col-lg-7">
-                <h2 class="featurette-heading">First Heading</h2>
-                <p class="lead">Content</p>
-            </div>
-            <div class="col-lg-5">
-                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row featurette">
-            <div class="col-lg-7">
-                <h2 class="featurette-heading">First Heading</h2>
-                <p class="lead">Content</p>
-            </div>
-            <div class="col-lg-5">
-                <img src="http://placehold.it/400x250" class="featurette-image img-responsive-center-block" alt="">
-            </div>
-        </section>
-        <hr class="featurette-divider">
-        <section class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-                <p>content copy...</p>
-            </div>
-        </section>
-        <footer>
-            <p class="pull-right"><a href="#">Back to top</a></p>
-            <p>© 2015 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </footer>
 
+        </div>
     </section>
+    <section class="container" ng-controller="BookingsCtrl as booking">
+        <div class="col-lg-6">
+            <div class="row">
+                <!--returning client-->
+                <form name="booking.form1">
+                    <formly-form model="booking.model.phone" fields="booking.fields"></formly-form>
+                    <span class="error" ng-show="booking.phone.$error.pattern">Please match pattern [+91-036-78658 || 91-036-78658]</span>
+                    <formly-form model="booking.model.password" fields="booking.fields"></formly-form>
+                    <button type="submit" ng-submit="booking.submit()" class="btn btn-primary submit-button">submit</button>
+                </form><!--end returning client-->
+                <!--new client-->
+                <form action="" name="booking.form2">
+                    <formly-form model="booking.model.login" fields="booking.fields.login"></formly-form>
+                    <formly-form model="booking.model.password" fields="booking.fields.password"></formly-form>
+                </form><!--end new client-->
+
+                <!--<form name="booking.form-password">
+                    <formly-form model="booking.model.password" fields="booking.fields"></formly-form>
+                </form>-->
+
+                <!--<form ng-submit="ctrl.submit1()">
+                    <input type="text" ng-model="ctrl.username">
+                    <input type="password" ng-model="ctrl.password">
+                    <input type="submit" value="Submit">
+                </form>
+
+                <form ng-submit="ctrl.submit2()">
+                    <input type="text" ng-model="ctrl.user.username">
+                    <input type="password" ng-model="ctrl.user.password">
+                    <input type="submit" value="Submit">
+                </form>-->
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="angular-google-map-container">
+        <section id="contact" class="background2 section-padding">
+            <div class="container">
+                <div class="row mb30">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+                        <h2>Contact</h2>
+                        <span class="section-divider mb15"></span>
+                        <p class="no-margin scaleReveal" data-sr-id="53" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">Beautiful All Day. Beautiful All Night.</p>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col-sm-5 col-lg-4">
+                        <h5 class="heading-1 mb20">Visit Us</h5>
+                        <h4 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420<br>New York City, New York 99912</h4>
+                        <p class="no-margin text-xs-small">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates. Temporibus autem quibusdam et aut.</p>
+                        <hr class="mini-hr">
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                    <div class="col-sm-6 col-lg-7 mt30-xs">
+                        <form data-toggle="validator" id="contactForm" name="contactForm" novalidate="true">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="msg_subject" placeholder="Subject *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <input class="form-control" id="phone" placeholder="Phone" type="text">
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row mb10">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="name" placeholder="Your Name *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="email form-control" data-error="This section is required." id="email" placeholder="Email *" required="" type="email">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <textarea class="form-control" data-error="This section is required." id="message" placeholder="Message *" required="" rows="5"></textarea>
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt15">
+                                <div class="col-sm-6">
+                                    <div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6 text-right">
+                                    <button type="submit" id="submit" class="btn btn-default btn-lg disabled" style="pointer-events: all; cursor: pointer;">Send</button>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                        </form><!-- /.form -->
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+        <section id="map" style="transform: translateZ(0px); background-color: rgb(229, 227, 223);" ng-controller="mainController">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </section>
+        <section id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="col-sm-3">
+                        <span class="icon-handle-streamline-vector logo"></span>
+                        <a class="navbar-brand text-center" href="#home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
+                        <p class="text-switch no-margin">© 2016 All Rights Reserved</p>
+                    </div><!-- /.column -->
+
+                    <!-- Social -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Social</h5>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-snapchat fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- List -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Info</h5>
+                        <ul class="list-arrow list-arrow-color no-margin text-small">
+                            <li>About JJ</li>
+                            <li>Locations</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>FAQ</li>
+                            <li>Account</li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- Contact -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1 mb20">Contact Us</h5>
+                        <h5 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420 New York City, New York 99912</h5>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                </div>
+
+                <div class="row">
+                    <hr class="featurette-divider">
+                    <div class="col-sm-12 text-center">
+                        <span class="text-small">Crafted with <i class="fa fa-heart" aria-hidden="true"></i> by Robert Yarborough © 2016</span>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+    </footer><!--end Footer Section -->
 </section>

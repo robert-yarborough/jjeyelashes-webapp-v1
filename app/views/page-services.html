@@ -40,7 +40,63 @@
         </div>
     </nav><!--end submenu-->
     <!-- start the featurettes -->
-    <section class="container">
+    <section class="container" ng-controller="servicesController">
+        <section class="row accordion-wrapper">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" ng-href="#collapse1" aria-expanded="true" aria-controls="collapseOne">{{projects[0].title}}
+                            </a>
+                        </h4>
+                    </div>
+                    <div ng-attr-id="{{&quot;collapse&quot;+projects[0].id}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <h4>Preambuła do ZA m.5</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">About The Reins Act
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <h4>Slide Title</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" ng-href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Video
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <h4>Slide Title</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFour">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseFour">Photos
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                        <div class="panel-body">
+                            <h4>Slide Title</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="row featurette">
             <div class="col-lg-7">
                 <h2 class="featurette-heading">First Heading</h2>
@@ -146,5 +202,147 @@
         </footer>
 
     </section>
+    <!-- Footer Section -->
+    <footer class="angular-google-map-container">
+        <section id="contact" class="background2 section-padding">
+            <div class="container">
+                <div class="row mb30">
+                    <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 section-title text-center">
+                        <h2>Contact</h2>
+                        <span class="section-divider mb15"></span>
+                        <p class="no-margin scaleReveal" data-sr-id="53" style="; visibility: visible;  -webkit-transform: translateY(0) scale(1); opacity: 1;transform: translateY(0) scale(1); opacity: 1;-webkit-transition: -webkit-transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; transition: transform 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s, opacity 1.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0.05s; ">Beautiful All Day. Beautiful All Night.</p>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+                <div class="row">
+                    <div class="col-sm-5 col-lg-4">
+                        <h5 class="heading-1 mb20">Visit Us</h5>
+                        <h4 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420<br>New York City, New York 99912</h4>
+                        <p class="no-margin text-xs-small">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates. Temporibus autem quibusdam et aut.</p>
+                        <hr class="mini-hr">
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                    <div class="col-sm-6 col-lg-7 mt30-xs">
+                        <form data-toggle="validator" id="contactForm" name="contactForm" novalidate="true">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="msg_subject" placeholder="Subject *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <input class="form-control" id="phone" placeholder="Phone" type="text">
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row mb10">
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="form-control" data-error="This section is required." id="name" placeholder="Your Name *" required="" type="text">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <input class="email form-control" data-error="This section is required." id="email" placeholder="Email *" required="" type="email">
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group has-error">
+                                        <div class="controls">
+                                            <textarea class="form-control" data-error="This section is required." id="message" placeholder="Message *" required="" rows="5"></textarea>
+                                            <div class="help-block with-errors"><ul class="list-unstyled"><li>This section is required.</li></ul></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt15">
+                                <div class="col-sm-6">
+                                    <div id="msgSubmit" class="h4 hidden mt10 no-margin-bottom"></div>
+                                </div><!-- /.column -->
+                                <div class="col-sm-6 text-right">
+                                    <button type="submit" id="submit" class="btn btn-default btn-lg disabled" style="pointer-events: all; cursor: pointer;">Send</button>
+                                </div><!-- /.column -->
+                            </div><!-- /.row -->
+                        </form><!-- /.form -->
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+        <section id="map" style="transform: translateZ(0px); background-color: rgb(229, 227, 223);" ng-controller="mainController">
+            <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                </ui-gmap-marker>
+            </ui-gmap-google-map>
+        </section>
+        <section id="footer" class="">
+            <div class="container">
+                <div class="row">
+                    <!-- Logo -->
+                    <div class="col-sm-3">
+                        <span class="icon-handle-streamline-vector logo"></span>
+                        <a class="navbar-brand text-center" href="#home"><img src="images/logo-inverse.png" class="img-responsive logo" alt="brand" /></a>
+                        <p class="text-switch no-margin">© 2016 All Rights Reserved</p>
+                    </div><!-- /.column -->
+
+                    <!-- Social -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Social</h5>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                            <li><a href="#"><i class="fa fa-snapchat fa-lg" aria-hidden="true"></i>
+                            </a></li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- List -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1">Info</h5>
+                        <ul class="list-arrow list-arrow-color no-margin text-small">
+                            <li>About JJ</li>
+                            <li>Locations</li>
+                            <li>Terms & Conditions</li>
+                            <li>Privacy Policy</li>
+                            <li>FAQ</li>
+                            <li>Account</li>
+                        </ul>
+                    </div><!-- /.column -->
+
+                    <!-- Contact -->
+                    <div class="col-sm-3">
+                        <h5 class="heading-1 mb20">Contact Us</h5>
+                        <h5 class="mb15">142 Pelican Drive • 1252nd Floor, Suite 420 New York City, New York 99912</h5>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Email:</strong> info@particle.com</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Phone:</strong> +1 212-249-2390</p>
+                        <p class="text-xs-small mb5"><strong class="text-switch">Fax:</strong> +1 112-444-2390</p>
+                    </div><!-- /.column -->
+                </div>
+
+                <div class="row">
+                    <hr class="featurette-divider">
+                    <div class="col-sm-12 text-center">
+                        <span class="text-small">Crafted with <i class="fa fa-heart" aria-hidden="true"></i> by Robert Yarborough © 2016</span>
+                    </div><!-- /.column -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+    </footer><!--end Footer Section -->
 </section>
 

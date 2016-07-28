@@ -60,7 +60,7 @@ a{
 /* entering animations --------------------------------------- */
 /* scale up */
 @keyframes scaleUp {
-    from    { opacity: 0.3; -webkit-transform: scale(0.8); }
+    from    { opacity: 0; -webkit-transform: scale(0.9); }
 }
 
 /* slide in from the right */
@@ -71,15 +71,85 @@ a{
 
 /* slide in from the bottom */
 @keyframes slideInUp {
-    from    { transform:translateY(100%); }
-    to      { transform: translateY(0); }
+    from    { transform:translateY(100%); opacity: 0; }
+    to      { transform: translateY(0); opacity: 1;}
 }
 
-.ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }
-.ng-leave           { animation: slideInUp 0.5s both ease-in; z-index: 9999; }
+
+
+.slideUp{
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+
+    animation-timing-function: ease;
+    -webkit-animation-timing-function: ease;
+
+    visibility: visible !important;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    50%{
+        transform: translateY(-8%);
+    }
+    65%{
+        transform: translateY(4%);
+    }
+    80%{
+        transform: translateY(-4%);
+    }
+    95%{
+        transform: translateY(2%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        -webkit-transform: translateY(100%);
+    }
+    50%{
+        -webkit-transform: translateY(-8%);
+    }
+    65%{
+        -webkit-transform: translateY(4%);
+    }
+    80%{
+        -webkit-transform: translateY(-4%);
+    }
+    95%{
+        -webkit-transform: translateY(2%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ng-enter           { animation: slideUp 0.3s both ease-in; z-index: 8888;
+    visibility: hidden;}
+.ng-leave           { animation: slideUp 0.3s both ease-in; z-index: 9999; opacity: 0; }
 
 .ng-enter       { z-index: 8888; }
 .ng-leave       { z-index: 9999; }
+
 
 /* page specific animations ------------------------ */
 
@@ -96,6 +166,21 @@ a{
 .page-products.ng-leave      { transform-origin: 0% 0%; animation: rotateFall 1s both ease-in; }
 
 
+/* child-page specific animations ------------------- */
+.child-locations-madison.ng-enter            { animation:slideUp 0.3s both ease-in; }
+.child-locations-madison.ng-leave            { transform-origin: 0% 0%; animation: slideUp 1s both ease-in; }
+
+
+.child-locations-soho.ng-enter               { animation:slideUp 0.3s both ease-in; }
+.child-locations-soho.ng-leave               { transform-origin: 0% 0%; animation: slideUp 1s both ease-in;}
+
+
+.child-locations-heraldsquare.ng-enter       { }
+.child-locations-heraldsquare.ng-leave       { }
+
+
+.child-locations-midtown.ng-enter            { }
+.child-locations-midtown.ng-leave            { }
 
 
 
@@ -1119,3 +1204,55 @@ div.shadow{
 
 /* bookings */
 /* contact */
+#contact {
+    margin-bottom: 100px;
+}
+
+
+
+
+/* horizontal accordion */
+#loader {
+    position:absolute;
+    z-index:2;
+    width:100%;
+    text-align:center;
+    top:40%;
+}
+
+.accordion-wrapper {
+    display: block;
+    height: 200px;
+    max-height: 200px;
+}
+
+#accordion {
+    max-width: 600px;
+    margin-left: 15px;
+}
+
+.panel-group {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(-98%) rotate(-90deg);
+    -webkit-transform-origin: right top;
+    -moz-transform: translateX(-98%) rotate(-90deg);
+    -moz-transform-origin: right top;
+    -o-transform: translateX(-98%) rotate(-90deg);
+    -o-transform-origin: right top;
+    transform: translateX(-98%) rotate(-90deg);
+    transform-origin: right top;
+    margin-bottom: 15px;
+}
+
+.panel-body {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(0%) rotate(90deg);
+    -webkit-transform-origin: left top;
+    -moz-transform: translateX(0%) rotate(90deg);
+    -moz-transform-origin: left top;
+    -o-transform: translateX(0%) rotate(90deg);
+    -o-transform-origin: left top;
+    transform: translateX(0%) rotate(90deg);
+    transform-origin: left top;
+    height: 200px;
+}
